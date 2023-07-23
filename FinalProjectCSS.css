@@ -1,0 +1,47 @@
+HTML   {
+    background-color: rgb(185, 177, 177);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow'
+}
+
+header {
+    text-align: center;
+    font-size: 54px;
+}
+
+nav {
+    background-color: rgb(139, 195, 195);
+    height: 30px;
+}
+
+nav ul {
+
+}
+
+nav ul li {
+    list-style-type: none;
+    width: 120px;
+    float: left;
+    border-right: 1px solid;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    line-height: 30px;
+    color: black;
+    display: block;
+}
+
+li a:hover {
+    background-color: whitesmoke;
+    font-color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    background-color: rgb(139, 195, 195);
+}

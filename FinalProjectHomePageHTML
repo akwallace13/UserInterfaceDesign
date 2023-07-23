@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Reading Nook</title>
+        <link href="FinalProjectCSS.css" rel="stylesheet">
+        <script src="FinalProjectJAVA.js"></script>
+    </head>
+
+    <body>
+        <header>
+            The Reading Nook
+        </header>
+
+        <!--main content top-->
+
+        <!--main content bottom-->
+
+        <!--right column content-->
+    </body>
+
+    <!--Navigation Bar--> 
+    <nav>
+        <ul>
+            <li><a href='#'</a>Homepage</li>
+            <li><a href='#'</a>Currently Reading</li>
+            <li><a href='#'</a>TBR</li>
+            <li><a href='#'</a>Loaned</li>
+            <li><a href='#'</a>Read</li>
+            <li><br></li>
+            <li><a href='#'</a>Log In</a></li>
+            <li><a href='#'</a>Log Out</a></li>
+            <li><a href='#'</a>Create Account</a></li>
+        </ul>
+    </nav>
+
+    <!--footer-->
+    <footer>
+        <p>The Reading Nook</p>
+        <p>This is a fictional company created and designed by Amanda Wallace for the purpose of project requirements.</p>
+        <p>Do not try to contact us.</p>
+        <p>_</p>
+        <p>We don't exist.</p>
+    </footer>
+    
+</html>
