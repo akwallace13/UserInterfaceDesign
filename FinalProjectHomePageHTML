@@ -1,37 +1,167 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>The Reading Nook</title>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link href="FinalProjectCSS.css" rel="stylesheet">
+        <link href="bootstrap-grid.css" rel="stylesheet">
         <script src="FinalProjectJAVA.js"></script>
     </head>
 
     <body>
+        <!--logo-->
         <header>
-            The Reading Nook
+            <img class="logo" src="TheReadingNookLogo.png" alt="The Reading Nooks Logo">
+        <!--end logo-->
+
+            <!--Navigation Bar--> 
+            <nav>
+                <ul class="nav_links">
+                    <li><a href='#'</a>Homepage</li>
+                    <li><a href='#'</a>Currently Reading</li>
+                    <li><a href='#'</a>TBR</li>
+                    <li><a href='#'</a>Loaned</li>
+                    <li><a href='#'</a>Read</li>
+                </ul>
+            </nav>
+
+            <a class="cta" href='#'><button>Log In</button></a>
+            <a class="cta" href='#'><button>Log Out</button></a>
+            <a class="cta" href='#'><button>Create Account</button></a>
+            <!--end Navigation Bar-->
         </header>
 
-        <!--main content top-->
+        <!--body content-->
+        <div class="container">
+            <div class="row">
+                <!--left body-->
+                <div class="col-8">
+                    <!--top body-->
+                    <div class="row">
+                        <div class="col">
+                            <h2>Welcome! Here are some things you may find interesting.</h2>
 
-        <!--main content bottom-->
+                            <ul class="top_graphs">
+                                <li>
+                                    <img src="FillerGraph1.png" width="300px" height="auto">
+                                </li>
 
-        <!--right column content-->
+                                <li>
+                                    <img src="FillerGraph2.jpeg" width="300px" height="auto">
+                                </li>
+
+                                <li>
+                                    <img src="FillerGraph4.png" width="300px" height="auto">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end top body-->
+                    
+                    <!--bottom body-->
+                    <div class="row">
+                        <div class="col">
+                            <h2>Maybe these could be your next read?</h2>
+                                <div class="slider">
+                                    <div class="slides">
+                                        <!--radio buttons-->
+                                        <input type="radio" name="radio-btn" id="radio1">
+                                        <input type="radio" name="radio-btn" id="radio2">
+                                        <input type="radio" name="radio-btn" id="radio3">
+                                        <input type="radio" name="radio-btn" id="radio4">
+                                        <!--end radio buttons-->
+
+                                        <!--image slides-->
+                                        <div class="slide first">
+                                            <img src="BookCover1.jpeg">
+                                        </div>
+
+                                        <div class="slide">
+                                            <img src="BookCover2.jpeg">
+                                        </div>
+
+                                        <div class="slide">
+                                            <img src="BookCover3.jpeg">
+                                        </div>
+
+                                        <div class="slide">
+                                            <img src="BookCover4.png">
+                                        </div>
+                                        <!--end image slides-->
+
+                                        <!--auto navigation-->
+                                        <div class="navigation-auto">
+                                            <div class="auto-btn1"></div>
+                                            <div class="auto-btn2"></div>
+                                            <div class="auto-btn3"></div>
+                                            <div class="auto-btn4"></div>
+                                        </div>
+                                        <!--end auto navigation-->
+
+                                    </div>
+                                    <!--manual navigation-->
+                                    <div class="navigation-manual">
+                                        <label for="radio1" class="manual-btn"></label>
+                                        <label for="radio2" class="manual-btn"></label>
+                                        <label for="radio3" class="manual-btn"></label>
+                                        <label for="radio4" class="manual-btn"></label>
+                                    </div>
+                                    <!--end manual navigation-->
+                                </div>
+                                <!--end image slider-->  
+                                
+                                <!--autoscroll javascript-->
+                                <script type="text/javascript">
+                                    var counter = 1;
+                                    setInterval(function(){
+                                        document.getElementById('radio' + counter).checked=true;
+                                        counter++;
+                                        if(counter > 4){
+                                            counter = 1;
+                                        }
+                                    }, 5000);
+                                </script>
+                                <!--end autoscroll javascript-->
+
+                        </div>
+                    </div>
+                    <!--end bottom body-->
+                </div>
+                <!--end left body-->
+                
+                <!--right side content-->
+                <div class="col-4">
+                    <h2>TBR List</h2>
+
+                    <ul>
+                        <li>
+                        <img src="BookCover1.jpeg" width="300px" height="auto">
+                        </li>
+
+                        <li>
+                            <img src="BookCover2.jpeg" width="300px" height="auto">
+                        </li>
+
+                        <li>
+                            <img src="BookCover3.jpeg" width="300px" height="auto">
+                        </li>
+
+                        <li>
+                            <img src="BookCover4.png" width="300px" height="auto">
+                        </li>
+                    </ul>
+                </div>
+                <!--end right side content-->
+            </div>
+        </div> 
+        <!--end body content-->
     </body>
 
-    <!--Navigation Bar--> 
-    <nav>
-        <ul>
-            <li><a href='#'</a>Homepage</li>
-            <li><a href='#'</a>Currently Reading</li>
-            <li><a href='#'</a>TBR</li>
-            <li><a href='#'</a>Loaned</li>
-            <li><a href='#'</a>Read</li>
-            <li><br></li>
-            <li><a href='#'</a>Log In</a></li>
-            <li><a href='#'</a>Log Out</a></li>
-            <li><a href='#'</a>Create Account</a></li>
-        </ul>
-    </nav>
+
 
     <!--footer-->
     <footer>
@@ -41,5 +171,6 @@
         <p>_</p>
         <p>We don't exist.</p>
     </footer>
+    <!--end footer-->
     
 </html>

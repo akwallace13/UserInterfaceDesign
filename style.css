@@ -2,22 +2,27 @@ body {
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 color:black;
 }
+
 h1 {
 font-size: 50px;
 font-weight: bold;
 }
+
 h2 {
 font-size: 40px;
 }
+
 h3 {
 font-size: 30px;
 }
+
 button {
 background-color: c3af89;
 border-radius: 5px;
 padding: 10px;
 color: white;
 }
+
 .inputLabel {
 font-size: 14px;
 font-weight: black;
@@ -26,21 +31,26 @@ input.inputField {
 padding: 5px;
 border: 1px c3af89;
 }
+
 div.box {
 height: 100px;
 width: 100px;
 display: inline-block;
 margin: 0 10px 0 10px;
 }
+
 #primary1 {
 background-color: 9f8d73;
 }
+
 #primary2 {
 background-color:c3af89;
 }
+
 #primary3 {
 background-color:f2e5bb;
 }
+
 .warning {
 background-color: ceb035;
 font-weight: bold;
