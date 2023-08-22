@@ -1,0 +1,27 @@
+{
+    "pets"; [
+        {
+            "title" : "Book One",
+            "author" : "Author One",
+            "readingProgress" : "progress",
+            "started" : 2016,
+            "photo" : "BookCover1.jpeg"
+        },
+
+        {
+            "title" : "Book Two",
+            "author" : "Author Two",
+            "readingProgress" : "progress",
+            "started" : 2016,
+            "photo" : "BookCover2.jpeg"
+        },
+
+        {
+            "title" : "Book Three",
+            "author" : "Author Three",
+            "readingProgress" : "progress",
+            "started" : 2016,
+            "photo" : "BookCover3.jpeg"
+        }
+    ]
+}

@@ -1,0 +1,216 @@
+@background-color: rgb(139, 195, 195);
+@second-color: whitesmoke;
+@third-color: black;
+@fourth-color: rgb(185, 177, 177);
+@font-family: 'Franklin Gothic Medium', "Arial Narrow";
+
+HTML {
+    background: @background-color;
+    font-family: @font-family;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: @background-color;
+}
+
+html, body {
+    width: 100%;
+}
+
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    color: @third-color;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    background-color: @background-color;
+}
+
+.logo {
+    cursor: pointer;
+    max-width: 155px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: @second-color;
+}
+
+.top_graphs li {
+    display: inline-block;
+    padding: 5px 5px;
+    list-style: none;
+    overflow: auto
+}
+
+button {
+    padding: 9px 15px;
+    background-color: @second-color;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: @fourth-color
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    background-color: @second-color
+    padding: 10px 10px;
+}
+
+.main {
+    float: center;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*carosel*/
+body {
+    width: 100%;
+    margin: 0;
+    padding: 250px 10px 150px 10px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    /*keep img centered*/
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+
+/*manual navigation*/
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid @third-color;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer; 
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: @second-color;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+    &#radio2:checked ~ .first {
+        margin-left: -20%;
+    }
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+/*auto navigation*/
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div{
+    border: 2px solid @third-color;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: @second-color;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn1 {
+    background: @second-color;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn1 {
+    background: @second-color;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn1 {
+    background: @second-color;
+}
