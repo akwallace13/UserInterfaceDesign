@@ -8,19 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="FinalProjectCSS.css" rel="stylesheet">
+        <script src="FinalProjectJS.js"></script>
         <link href="bootstrap-grid.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-        <script src="https://github.com/janl/mustache.js/blob/master/mustache.js" type="text/javascript"></script>
-    </head>
 
-    <body onload="readingBooks">
+        <script src="JQuery.js" type="text/javascript"></script>
+        <script src="mustache.js" type="text/javascript"></script>
+        <script src="Handlebars.js" type="text/javascript"></script>
+    </head>
         
-        <!--logo-->
+        <!--logo (done)-->
         <header>
             <img class="logo" src="TheReadingNookLogo.png" alt="The Reading Nooks Logo">
         <!--end logo-->
 
-            <!--Navigation Bar--> 
+            <!--Navigation Bar (done)--> 
             <nav>
                 <ul class="nav_links">
                     <li><a href="FinalProjectHomePageHTML"</a>Homepage</li>
@@ -45,32 +46,44 @@
                     <!--top body-->
                     <div class="row">
                         <div class="col">
-                            <h2>Here is what you are currently reading</h2>
+                            <h2>Currently Reading</h2>
                             
 <!--need to adjust code here-->
-                            <script id="template" type="x-tmpl-mustache">
-                                Hello {{user.name}} You are and live in .
-                            </script>   
+                           <!--<div class="page-wrap">
+                                <div id="books-container"></div>
+                            </div>
 
-                            <div id="target"></div>
+                            <script id="booksTemplate" type="text/x-handlebars-template">
+                                {{#each books}}
+                                    <div class="books">
+                                        <div class="photo-column">
+                                            <img src="{{photo}}">
+                                        </div>
+
+                                        <div class="info-column">
+                                            <h2>{{title}} <span class="author">({{author}})</span></h2>
+
+                                            <p> Started: {{started}}</p>
+
+                                            <p>Reading Progress: {{readingProgress}}</p>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </script>-->
+
+
+                            <div class="myElement"><img src="BookCover1.jpeg" height="200px"></div>
+                            <div class="myElement"><img src="BookCover2.jpeg" height="200px"></div>
+                            <div class="myElement"><img src="BookCover3.jpeg" height="200px"></div>
+                            <div class="myElement"><img src="BookCover4.png" height="200px"></div>
 
                             <script>
                                 $(document).ready(function(){
-                                    var template = $("#template").html();
-                                    Mustache.parse(template);
-
-                                    var rendered = Mustache.render(template, {
-                                        user: {
-                                            name: "Steve",
-                                            age: "38",
-                                            home: "Philadelphia"
-                                        },
-                                        show: true
-                                    })
-                                    $("#target").html(rendered);
+                                    $(".myElement").each(function(){
+                                        $(this).append("<p>Title: </p> <p>Author:</p> <p>Series: </p> <p>Started: </p> <p> Progress </p>");
+                                    });
                                 });
                             </script>
-
                         </div>
                     </div>
                     <!--end top body-->
@@ -80,16 +93,16 @@
                 
                 <!--right side content-->
                 <div class="col-4">
-                    <h2>What are you reading?</h2>
-<!--need to code here-->
+                    <h2>Add A Book</h2>
                 </div>
                 <!--end right side content-->
             </div>
         </div> 
         <!--end body content-->
+            <div class="boxContainer">
+                <input type="text" name="box" placeholder="Search For A Book Here">
+            </div>
     </body>
-
-
 
     <!--footer-->
     <footer>
