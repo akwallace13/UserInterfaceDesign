@@ -37,6 +37,10 @@ header {
     max-width: 155px;
 }
 
+.myElement {
+    max-width: 150px;
+}
+
 .nav_links {
     list-style: none;
 }

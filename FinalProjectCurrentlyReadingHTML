@@ -9,8 +9,8 @@
 
         <link href="FinalProjectCSS.css" rel="stylesheet">
         <link href="bootstrap-grid.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>"
-        <!--<script src="FinalProjectJAVA.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="https://github.com/janl/mustache.js/blob/master/mustache.js" type="text/javascript"></script>
     </head>
 
     <body onload="readingBooks">
@@ -23,11 +23,11 @@
             <!--Navigation Bar--> 
             <nav>
                 <ul class="nav_links">
-                    <li><a href='#'</a>Homepage</li>
-                    <li><a href='#'</a>Currently Reading</li>
-                    <li><a href='#'</a>TBR</li>
-                    <li><a href='#'</a>Loaned</li>
-                    <li><a href='#'</a>Read</li>
+                    <li><a href="FinalProjectHomePageHTML"</a>Homepage</li>
+                    <li><a href="FinalProjectCurrentlyReadingHTML"</a>Currently Reading</li>
+                    <li><a href="FinalProjectTBRHTML"</a>TBR</li>
+                    <li><a href="FinalProjectLoanedHTML"</a>Loaned</li>
+                    <li><a href="FinalProjectReadHTML"</a>Read</li>
                 </ul>
             </nav>
 
@@ -45,41 +45,32 @@
                     <!--top body-->
                     <div class="row">
                         <div class="col">
-                            <h2>Here is what you are currently reading.</h2>
+                            <h2>Here is what you are currently reading</h2>
                             
 <!--need to adjust code here-->
-                            <div class="myElement">Book 1</div>
-                            <div class="myElement">Book 2</div>
-                            <div class="myElement">Book 3</div>
-                            <div class="myElement">Book 4</div>
+                            <script id="template" type="x-tmpl-mustache">
+                                Hello {{user.name}} You are and live in .
+                            </script>   
+
+                            <div id="target"></div>
 
                             <script>
                                 $(document).ready(function(){
-                                    $(".myElement").each(function(){
-                                        $(this).append("Some General Book Info");
-                                    });
+                                    var template = $("#template").html();
+                                    Mustache.parse(template);
+
+                                    var rendered = Mustache.render(template, {
+                                        user: {
+                                            name: "Steve",
+                                            age: "38",
+                                            home: "Philadelphia"
+                                        },
+                                        show: true
+                                    })
+                                    $("#target").html(rendered);
                                 });
                             </script>
 
-                        <!--<ul id="target"></ul>
-                        <script>
-                            function readingBooks() {
-                                var Titles = ["Book1", "Book2", "Book3"];
-                                var target = document.getElementById("target");
-
-                                for(var i=0; i < Titles.length; i++){
-                                    console.log(Titles[i]);
-
-                                    var node = document.createElement("li");
-                                    var textnode = document.createTextNode(Titles[i]);
-
-                                    node.appendChild(textnode);
-
-                                    target.appendChild(node);
-                                }
-                            }-->
-                        <!--</script>-->
-                        <!--    <script src="FinalProjectJS.js"></script> -->
                         </div>
                     </div>
                     <!--end top body-->

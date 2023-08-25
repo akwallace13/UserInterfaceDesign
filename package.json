@@ -4,3 +4,15 @@
     "mustache": "^4.2.0"
   }
 }
+
+{
+  "name": "UserInterfaceDesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "FinalProjectJS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+}

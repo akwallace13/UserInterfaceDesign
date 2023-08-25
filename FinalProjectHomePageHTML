@@ -9,7 +9,7 @@
 
         <link href="FinalProjectCSS.css" rel="stylesheet">
         <link href="bootstrap-grid.css" rel="stylesheet">
-        <script src="FinalProjectJAVA.js"></script>
+        <script src="FinalProjectJS.js"></script>
     </head>
 
     <body>
@@ -21,11 +21,11 @@
             <!--Navigation Bar--> 
             <nav>
                 <ul class="nav_links">
-                    <li><a href='#'</a>Homepage</li>
-                    <li><a href='#'</a>Currently Reading</li>
-                    <li><a href='#'</a>TBR</li>
-                    <li><a href='#'</a>Loaned</li>
-                    <li><a href='#'</a>Read</li>
+                    <li><a href="FinalProjectHomePageHTML"</a>Homepage</li>
+                    <li><a href="FinalProjectCurrentlyReadingHTML"</a>Currently Reading</li>
+                    <li><a href="FinalProjectTBRHTML"</a>TBR</li>
+                    <li><a href="FinalProjectLoanedHTML"</a>Loaned</li>
+                    <li><a href="FinalProjectReadHTML"</a>Read</li>
                 </ul>
             </nav>
 
